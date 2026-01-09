@@ -184,7 +184,7 @@
             // logo
             // 
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(276, 37);
+            this.logo.Location = new System.Drawing.Point(288, 37);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(204, 159);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
