@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inlogpagina));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnInloggen = new System.Windows.Forms.Button();
+            this.txtWachtwoord = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,11 +53,11 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.btnInloggen);
+            this.panel1.Controls.Add(this.txtWachtwoord);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -66,6 +66,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(727, 670);
             this.panel1.TabIndex = 0;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(35, 152);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(656, 50);
+            this.txtEmail.TabIndex = 4;
             // 
             // panel2
             // 
@@ -111,34 +120,27 @@
             this.button2.Text = "Nog geen account? Registreer hier";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnInloggen
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(53)))), ((int)(((byte)(93)))));
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(35, 376);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(656, 80);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Inloggen";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnInloggen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(53)))), ((int)(((byte)(93)))));
+            this.btnInloggen.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInloggen.ForeColor = System.Drawing.Color.White;
+            this.btnInloggen.Location = new System.Drawing.Point(35, 376);
+            this.btnInloggen.Name = "btnInloggen";
+            this.btnInloggen.Size = new System.Drawing.Size(656, 80);
+            this.btnInloggen.TabIndex = 6;
+            this.btnInloggen.Text = "Inloggen";
+            this.btnInloggen.UseVisualStyleBackColor = false;
+            this.btnInloggen.Click += new System.EventHandler(this.btnInloggen_Click);
             // 
-            // textBox2
+            // txtWachtwoord
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(35, 288);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(656, 50);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(35, 152);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(656, 50);
-            this.textBox1.TabIndex = 4;
+            this.txtWachtwoord.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWachtwoord.Location = new System.Drawing.Point(35, 288);
+            this.txtWachtwoord.Name = "txtWachtwoord";
+            this.txtWachtwoord.PasswordChar = '*';
+            this.txtWachtwoord.Size = new System.Drawing.Size(656, 50);
+            this.txtWachtwoord.TabIndex = 5;
             // 
             // label4
             // 
@@ -220,11 +222,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtWachtwoord;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInloggen;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;

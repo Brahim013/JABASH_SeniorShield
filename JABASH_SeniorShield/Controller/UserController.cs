@@ -18,7 +18,7 @@ namespace JABASH_SeniorShield.Controller
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = "SELECT UserId, Voornaam, Achternaam, Email, Wachtwoord FROM tblUsers WHERE Email = @Email AND Wachtwoord = @Wachtwoord";
+                string query = "SELECT UserId, Voornaam, Achternaam, Email, GehashteWachtwoord FROM tblUsers WHERE Email = @Email AND GehashteWachtwoord = @Wachtwoord";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
 
