@@ -52,6 +52,12 @@
     <Compile Include="Inlogpagina.Designer.cs">
       <DependentUpon>Inlogpagina.cs</DependentUpon>
     </Compile>
+    <Compile Include="Startpagina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Startpagina.Designer.cs">
+      <DependentUpon>Startpagina.cs</DependentUpon>
+    </Compile>
     <Compile Include="Verwijderde Forms\OudeInlogpagina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Inlogpagina.resx">
       <DependentUpon>Inlogpagina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startpagina.resx">
+      <DependentUpon>Startpagina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Verwijderde Forms\OudeInlogpagina.resx">
       <DependentUpon>OudeInlogpagina.cs</DependentUpon>
