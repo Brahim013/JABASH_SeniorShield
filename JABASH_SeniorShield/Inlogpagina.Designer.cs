@@ -203,7 +203,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inlogpagina";
-            this.Text = "JABASH Senior Shield";
+            this.Text = "%5";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Inlogpagina_Load);
             this.Resize += new System.EventHandler(this.Inlogpagina_Resize);

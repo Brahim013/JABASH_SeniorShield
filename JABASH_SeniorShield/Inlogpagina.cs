@@ -80,6 +80,9 @@ namespace JABASH_SeniorShield
                 if (gebruiker != null)
                 {
                     MessageBox.Show($"Welkom terug, {gebruiker.Voornaam + " " + gebruiker.Achternaam}!", "Gelukt");
+                    View.frmPhishingDetector phishingDetector = new View.frmPhishingDetector();
+                    this.Hide();
+                    phishingDetector.Show();
                 }
                 else
                 {
