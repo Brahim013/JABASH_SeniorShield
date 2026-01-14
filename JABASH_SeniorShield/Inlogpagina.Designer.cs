@@ -34,7 +34,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRegistratie = new System.Windows.Forms.Button();
             this.btnInloggen = new System.Windows.Forms.Button();
             this.txtWachtwoord = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnRegistratie);
             this.panel1.Controls.Add(this.btnInloggen);
             this.panel1.Controls.Add(this.txtWachtwoord);
             this.panel1.Controls.Add(this.label4);
@@ -85,40 +85,44 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(656, 53);
             this.panel2.TabIndex = 1;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(181, 13);
+            this.label5.Location = new System.Drawing.Point(239, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(312, 25);
+            this.label5.Size = new System.Drawing.Size(207, 25);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Hulp nodig? Bel uw contactpersoon";
+            this.label5.Text = "Wachtwoord vergeten?";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.panel2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(145, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(199, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.panel2_Click);
             // 
-            // button2
+            // btnRegistratie
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(54)))), ((int)(((byte)(93)))));
-            this.button2.Location = new System.Drawing.Point(35, 489);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(656, 51);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Nog geen account? Registreer hier";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnRegistratie.BackColor = System.Drawing.Color.White;
+            this.btnRegistratie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistratie.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistratie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(54)))), ((int)(((byte)(93)))));
+            this.btnRegistratie.Location = new System.Drawing.Point(35, 489);
+            this.btnRegistratie.Name = "btnRegistratie";
+            this.btnRegistratie.Size = new System.Drawing.Size(656, 51);
+            this.btnRegistratie.TabIndex = 7;
+            this.btnRegistratie.Text = "Nog geen account? Registreer hier";
+            this.btnRegistratie.UseVisualStyleBackColor = false;
+            this.btnRegistratie.Click += new System.EventHandler(this.btnRegistratie_Click);
             // 
             // btnInloggen
             // 
@@ -203,7 +207,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inlogpagina";
-            this.Text = "%5";
+            this.Text = "JABASH - Senior Shield";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Inlogpagina_Load);
             this.Resize += new System.EventHandler(this.Inlogpagina_Resize);
@@ -227,7 +231,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnInloggen;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRegistratie;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;

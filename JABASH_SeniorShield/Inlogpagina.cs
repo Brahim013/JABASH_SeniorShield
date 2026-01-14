@@ -1,5 +1,7 @@
 ﻿using JABASH_SeniorShield.Controller;
 using JABASH_SeniorShield.Model;
+using JABASH_SeniorShield.View.Meldingen;
+using JABASH_SeniorShield.View.Register;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,30 +50,28 @@ namespace JABASH_SeniorShield
             string emailInput = txtEmail.Text.Trim();
             string wachtwoordInput = txtWachtwoord.Text;
 
-            // 1. Check: Is het veld leeg?
             if (string.IsNullOrWhiteSpace(emailInput))
             {
-                MessageBox.Show("Vult u alstublieft uw e-mailadres in.", "Invoer ontbreekt");
+                frmFoutmelding melding = new frmFoutmelding("Invoer ontbreekt", "Vult u alstublieft een e-mailadres in.", "Info");
+                melding.ShowDialog();
                 return;
             }
 
-            // 2. Email Validatie (Regex)
-            // Dit controleert of er een @ in zit, een punt, en geen rare tekens
             string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             if (!System.Text.RegularExpressions.Regex.IsMatch(emailInput, emailPattern))
             {
-                MessageBox.Show("Het ingevulde e-mailadres is niet geldig. Denk aan het @-teken en de punt.", "Ongeldig e-mailadres");
+                frmFoutmelding melding = new frmFoutmelding("Ongeldig e-mailadres", "Denk aan het @-teken en een punt.", "Info");
+                melding.ShowDialog();
                 return;
             }
 
-            // 3. Wachtwoord check (mag ook niet leeg zijn)
             if (string.IsNullOrWhiteSpace(wachtwoordInput))
             {
-                MessageBox.Show("Vult u alstublieft uw wachtwoord in.", "Invoer ontbreekt");
+                frmFoutmelding melding = new frmFoutmelding("Invoer ontbreekt", "Vult u alstublieft uw wachtwoord in.", "Info");
+                melding.ShowDialog();
                 return;
             }
 
-            // 4. Alles is technisch oké -> Controller aanroepen
             UserController userController = new UserController();
             try
             {
@@ -79,14 +79,19 @@ namespace JABASH_SeniorShield
 
                 if (gebruiker != null)
                 {
-                    MessageBox.Show($"Welkom terug, {gebruiker.Voornaam + " " + gebruiker.Achternaam}!", "Gelukt");
-                    View.frmPhishingDetector phishingDetector = new View.frmPhishingDetector();
+                    frmFoutmelding melding = new frmFoutmelding("Inloggen gelukt", $"Welkom terug, {gebruiker.Voornaam + " " + gebruiker.Achternaam}!", "Succes");
+                    melding.ShowDialog();
+                    View.Dashboard.frmHoofdmenu hoofdmenu = new View.Dashboard.frmHoofdmenu();
                     this.Hide();
-                    phishingDetector.Show();
+                    hoofdmenu.Show();
+                    // View.frmPhishingDetector phishingDetector = new View.frmPhishingDetector();
+                    // this.Hide();
+                    // phishingDetector.Show();
                 }
                 else
                 {
-                    MessageBox.Show("E-mail of wachtwoord is onjuist.", "Inloggen mislukt");
+                    frmFoutmelding melding = new frmFoutmelding("Inloggen mislukt", "E-mail of wachtwoord is onjuist", "Info");
+                    melding.ShowDialog();
                 }
             }
             catch (Exception ex)
@@ -94,6 +99,18 @@ namespace JABASH_SeniorShield
                 MessageBox.Show("Fout bij verbinden: " + ex.Message);
             }
 
+        }
+
+        private void btnRegistratie_Click(object sender, EventArgs e)
+        {
+            frmRegistratie registratiescherm = new frmRegistratie();
+            registratiescherm.Show();
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            frmWachtwoordVergeten wachtwoordVergeten = new frmWachtwoordVergeten();
+            wachtwoordVergeten.Show();
         }
     }
 }
