@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Net.Http;
+using JABASH_SeniorShield.Model;
+using JABASH_SeniorShield.Controller;
+using JABASH_SeniorShield.View.Meldingen;
 
 namespace JABASH_SeniorShield.View
 {
@@ -64,7 +67,13 @@ namespace JABASH_SeniorShield.View
                 risicoScore = 100;
             }
 
+            ScanModel nieuweScan = new ScanModel(txtAfzender.Text, txtMail.Text, risicoScore);
+            ScanController scanController = new ScanController();
+            scanController.OpslaanScanResultaat(nieuweScan);
+
             ToonResultaat(risicoScore);
+            // frmFoutmelding melding = new frmFoutmelding("Scan Gelukt", "De phishing scan is voltooid en opgeslagen!", "Success");
+            // melding.ShowDialog();
         }
 
         private void ToonResultaat(int score)

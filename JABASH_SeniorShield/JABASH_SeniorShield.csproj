@@ -63,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ScanController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Inlogpagina.cs">
       <SubType>Form</SubType>
@@ -70,6 +71,7 @@
     <Compile Include="Inlogpagina.Designer.cs">
       <DependentUpon>Inlogpagina.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\ScanModel.cs" />
     <Compile Include="Model\UserModel.cs" />
     <Compile Include="Verwijderde Forms\OudeInlogpagina.cs">
       <SubType>Form</SubType>
@@ -84,6 +86,12 @@
     </Compile>
     <Compile Include="View\Dashboard\frmHoofdmenu.Designer.cs">
       <DependentUpon>frmHoofdmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Mailbox\frmMailbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Mailbox\frmMailbox.Designer.cs">
+      <DependentUpon>frmMailbox.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Meldingen\frmFoutmelding.cs">
       <SubType>Form</SubType>
@@ -126,6 +134,9 @@
     </Compile>
     <EmbeddedResource Include="View\Dashboard\frmHoofdmenu.resx">
       <DependentUpon>frmHoofdmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Mailbox\frmMailbox.resx">
+      <DependentUpon>frmMailbox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Meldingen\frmFoutmelding.resx">
       <DependentUpon>frmFoutmelding.cs</DependentUpon>
