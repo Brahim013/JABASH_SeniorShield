@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoofdmenu));
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.pnlInhoud = new System.Windows.Forms.Panel();
-            this.btnMailbox = new System.Windows.Forms.Button();
-            this.btnPhishingHerkenner = new System.Windows.Forms.Button();
-            this.btnAfmelden = new System.Windows.Forms.Button();
-            this.btnTips = new System.Windows.Forms.Button();
-            this.btnInstellingen = new System.Windows.Forms.Button();
             this.logo = new System.Windows.Forms.PictureBox();
+            this.btnInstellingen = new System.Windows.Forms.Button();
+            this.btnTips = new System.Windows.Forms.Button();
+            this.btnAfmelden = new System.Windows.Forms.Button();
+            this.btnPhishingHerkenner = new System.Windows.Forms.Button();
+            this.btnMailbox = new System.Windows.Forms.Button();
+            this.pnlInhoud = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -57,42 +57,41 @@
             this.pnlMenu.Size = new System.Drawing.Size(332, 869);
             this.pnlMenu.TabIndex = 0;
             // 
-            // pnlInhoud
+            // logo
             // 
-            this.pnlInhoud.BackColor = System.Drawing.Color.White;
-            this.pnlInhoud.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlInhoud.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlInhoud.Location = new System.Drawing.Point(332, 0);
-            this.pnlInhoud.Name = "pnlInhoud";
-            this.pnlInhoud.Size = new System.Drawing.Size(932, 869);
-            this.pnlInhoud.TabIndex = 1;
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(52, 12);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(222, 173);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo.TabIndex = 13;
+            this.logo.TabStop = false;
             // 
-            // btnMailbox
+            // btnInstellingen
             // 
-            this.btnMailbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(53)))), ((int)(((byte)(93)))));
-            this.btnMailbox.FlatAppearance.BorderSize = 0;
-            this.btnMailbox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMailbox.ForeColor = System.Drawing.Color.White;
-            this.btnMailbox.Location = new System.Drawing.Point(31, 190);
-            this.btnMailbox.Name = "btnMailbox";
-            this.btnMailbox.Size = new System.Drawing.Size(263, 102);
-            this.btnMailbox.TabIndex = 7;
-            this.btnMailbox.Text = "Mailbox";
-            this.btnMailbox.UseVisualStyleBackColor = false;
+            this.btnInstellingen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(53)))), ((int)(((byte)(93)))));
+            this.btnInstellingen.FlatAppearance.BorderSize = 0;
+            this.btnInstellingen.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInstellingen.ForeColor = System.Drawing.Color.White;
+            this.btnInstellingen.Location = new System.Drawing.Point(31, 593);
+            this.btnInstellingen.Name = "btnInstellingen";
+            this.btnInstellingen.Size = new System.Drawing.Size(263, 102);
+            this.btnInstellingen.TabIndex = 12;
+            this.btnInstellingen.Text = "Instellingen";
+            this.btnInstellingen.UseVisualStyleBackColor = false;
             // 
-            // btnPhishingHerkenner
+            // btnTips
             // 
-            this.btnPhishingHerkenner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(53)))), ((int)(((byte)(93)))));
-            this.btnPhishingHerkenner.FlatAppearance.BorderSize = 0;
-            this.btnPhishingHerkenner.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhishingHerkenner.ForeColor = System.Drawing.Color.White;
-            this.btnPhishingHerkenner.Location = new System.Drawing.Point(31, 323);
-            this.btnPhishingHerkenner.Name = "btnPhishingHerkenner";
-            this.btnPhishingHerkenner.Size = new System.Drawing.Size(263, 102);
-            this.btnPhishingHerkenner.TabIndex = 8;
-            this.btnPhishingHerkenner.Text = "Phishing Herkenner";
-            this.btnPhishingHerkenner.UseVisualStyleBackColor = false;
-            this.btnPhishingHerkenner.Click += new System.EventHandler(this.btnPhishingHerkenner_Click);
+            this.btnTips.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(53)))), ((int)(((byte)(93)))));
+            this.btnTips.FlatAppearance.BorderSize = 0;
+            this.btnTips.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTips.ForeColor = System.Drawing.Color.White;
+            this.btnTips.Location = new System.Drawing.Point(31, 459);
+            this.btnTips.Name = "btnTips";
+            this.btnTips.Size = new System.Drawing.Size(263, 102);
+            this.btnTips.TabIndex = 11;
+            this.btnTips.Text = "Veiligheidstips";
+            this.btnTips.UseVisualStyleBackColor = false;
             // 
             // btnAfmelden
             // 
@@ -108,41 +107,43 @@
             this.btnAfmelden.UseVisualStyleBackColor = false;
             this.btnAfmelden.Click += new System.EventHandler(this.btnAfmelden_Click);
             // 
-            // btnTips
+            // btnPhishingHerkenner
             // 
-            this.btnTips.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(53)))), ((int)(((byte)(93)))));
-            this.btnTips.FlatAppearance.BorderSize = 0;
-            this.btnTips.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTips.ForeColor = System.Drawing.Color.White;
-            this.btnTips.Location = new System.Drawing.Point(31, 459);
-            this.btnTips.Name = "btnTips";
-            this.btnTips.Size = new System.Drawing.Size(263, 102);
-            this.btnTips.TabIndex = 11;
-            this.btnTips.Text = "Veiligheidstips";
-            this.btnTips.UseVisualStyleBackColor = false;
+            this.btnPhishingHerkenner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(53)))), ((int)(((byte)(93)))));
+            this.btnPhishingHerkenner.FlatAppearance.BorderSize = 0;
+            this.btnPhishingHerkenner.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhishingHerkenner.ForeColor = System.Drawing.Color.White;
+            this.btnPhishingHerkenner.Location = new System.Drawing.Point(31, 323);
+            this.btnPhishingHerkenner.Name = "btnPhishingHerkenner";
+            this.btnPhishingHerkenner.Size = new System.Drawing.Size(263, 102);
+            this.btnPhishingHerkenner.TabIndex = 8;
+            this.btnPhishingHerkenner.Text = "Phishing Herkenner";
+            this.btnPhishingHerkenner.UseVisualStyleBackColor = false;
+            this.btnPhishingHerkenner.Click += new System.EventHandler(this.btnPhishingHerkenner_Click);
             // 
-            // btnInstellingen
+            // btnMailbox
             // 
-            this.btnInstellingen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(53)))), ((int)(((byte)(93)))));
-            this.btnInstellingen.FlatAppearance.BorderSize = 0;
-            this.btnInstellingen.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInstellingen.ForeColor = System.Drawing.Color.White;
-            this.btnInstellingen.Location = new System.Drawing.Point(31, 593);
-            this.btnInstellingen.Name = "btnInstellingen";
-            this.btnInstellingen.Size = new System.Drawing.Size(263, 102);
-            this.btnInstellingen.TabIndex = 12;
-            this.btnInstellingen.Text = "Instellingen";
-            this.btnInstellingen.UseVisualStyleBackColor = false;
+            this.btnMailbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(53)))), ((int)(((byte)(93)))));
+            this.btnMailbox.FlatAppearance.BorderSize = 0;
+            this.btnMailbox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMailbox.ForeColor = System.Drawing.Color.White;
+            this.btnMailbox.Location = new System.Drawing.Point(31, 190);
+            this.btnMailbox.Name = "btnMailbox";
+            this.btnMailbox.Size = new System.Drawing.Size(263, 102);
+            this.btnMailbox.TabIndex = 7;
+            this.btnMailbox.Text = "Mailbox";
+            this.btnMailbox.UseVisualStyleBackColor = false;
+            this.btnMailbox.Click += new System.EventHandler(this.btnMailbox_Click);
             // 
-            // logo
+            // pnlInhoud
             // 
-            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(52, 12);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(222, 173);
-            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logo.TabIndex = 13;
-            this.logo.TabStop = false;
+            this.pnlInhoud.BackColor = System.Drawing.Color.White;
+            this.pnlInhoud.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlInhoud.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlInhoud.Location = new System.Drawing.Point(332, 0);
+            this.pnlInhoud.Name = "pnlInhoud";
+            this.pnlInhoud.Size = new System.Drawing.Size(932, 869);
+            this.pnlInhoud.TabIndex = 1;
             // 
             // frmHoofdmenu
             // 

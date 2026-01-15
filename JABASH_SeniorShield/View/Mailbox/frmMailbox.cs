@@ -21,5 +21,10 @@ namespace JABASH_SeniorShield.View.Mailbox
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

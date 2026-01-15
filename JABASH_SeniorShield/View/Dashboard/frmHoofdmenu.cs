@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JABASH_SeniorShield.View.Mailbox;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,20 @@ namespace JABASH_SeniorShield.View.Dashboard
 
             pnlInhoud.Controls.Add(phishingHerkenner);
             phishingHerkenner.Show();
+        }
+
+        private void btnMailbox_Click(object sender, EventArgs e)
+        {
+            pnlInhoud.Controls.Clear();
+
+            frmMailbox mailbox = new frmMailbox();
+
+            mailbox.TopLevel = false;
+            mailbox.FormBorderStyle = FormBorderStyle.None;
+            mailbox.Dock = DockStyle.Fill;
+
+            pnlInhoud.Controls.Add(mailbox);
+            mailbox.Show();
         }
     }
 }
