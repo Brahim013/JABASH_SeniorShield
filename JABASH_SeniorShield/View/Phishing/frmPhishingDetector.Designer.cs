@@ -59,7 +59,7 @@
             this.tx.Controls.Add(this.label3);
             this.tx.Controls.Add(this.label2);
             this.tx.Controls.Add(this.label1);
-            this.tx.Location = new System.Drawing.Point(35, -88);
+            this.tx.Location = new System.Drawing.Point(35, -93);
             this.tx.Name = "tx";
             this.tx.Size = new System.Drawing.Size(727, 848);
             this.tx.TabIndex = 1;
@@ -186,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 683);
+            this.ClientSize = new System.Drawing.Size(800, 673);
             this.Controls.Add(this.tx);
             this.Name = "frmPhishingDetector";
             this.Text = "Phishing Detector";

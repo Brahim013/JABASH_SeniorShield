@@ -62,7 +62,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(37, 247);
+            this.panel1.Location = new System.Drawing.Point(37, 232);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(727, 670);
             this.panel1.TabIndex = 0;
@@ -202,7 +202,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(800, 929);
+            this.ClientSize = new System.Drawing.Size(800, 899);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

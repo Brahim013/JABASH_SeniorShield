@@ -99,6 +99,12 @@
     <Compile Include="View\Meldingen\frmFoutmelding.Designer.cs">
       <DependentUpon>frmFoutmelding.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Phishingminicursus\frmPhishingCursus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Phishingminicursus\frmPhishingCursus.Designer.cs">
+      <DependentUpon>frmPhishingCursus.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Phishing\frmPhishingDetector.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Meldingen\frmFoutmelding.resx">
       <DependentUpon>frmFoutmelding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Phishingminicursus\frmPhishingCursus.resx">
+      <DependentUpon>frmPhishingCursus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Phishing\frmPhishingDetector.resx">
       <DependentUpon>frmPhishingDetector.cs</DependentUpon>

@@ -17,7 +17,7 @@ namespace JABASH_SeniorShield
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Inlogpagina());
+            Application.Run(new JABASH_SeniorShield.View.Phishingminicursus.frmPhishingCursus());
         }
     }
 }
